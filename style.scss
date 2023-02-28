@@ -1,0 +1,133 @@
+@import "background";
+$back-color: rgb(147, 147, 255);
+$heading-back: rgb(255, 255, 157);
+$text-color: rgb(89, 255, 0);
+$heading-color: pink;
+$font-family: "Papyrus";
+$font-size: 15px;
+$button-color: rgb(255, 201, 146);
+$margin: 50px;
+$padding: 15px;
+$primary-color: orange;
+$secondary-color: royalblue;
+$tritary-color: white;
+$label-color: rgb(255, 255, 255);
+$html-color: green;
+
+body {
+    background-color: rgb(207, 143, 255);
+    font-family: $font-family;
+    font-size: $font-size;
+    margin: $margin;
+    padding: $padding;
+}
+
+p {
+    background-color: $html-color;
+}
+
+/*h1 {
+    background-color: $heading-back;
+    color: $heading-color;
+}
+
+h2 {
+    background-color: $heading-back;
+    color: $heading-color
+} */
+
+div {
+    background-color: $back-color;
+    color: $text-color;
+}
+
+/*ul {
+    background-color: $back-color;
+    color: $text-color;
+}
+
+ul li {
+    background-color: $primary-color;
+    list-style: none;
+
+    a {
+        text-decoration: none;
+        color: $tritary-color;
+        &:hover {
+            color: black;
+            font-size: 20px;
+        }
+    }
+} */
+
+@mixin headingStyle {
+    /*color: $primary-color;
+    background-color: $secondary-color;
+    text-align: center;*/
+    background-color: aqua;
+}
+
+h1 {
+    @include headingStyle;
+}
+
+h2 {
+    @include headingStyle;
+}
+
+@mixin buttonStyle {
+    border-radius: 5px;
+}
+
+button {
+    background-color: $buttoncolor;
+    @include buttonStyle;
+}
+
+@mixin listStyle {
+    background-color: $secondary-color;
+}
+
+ul {
+    @include listStyle;
+}
+
+@mixin imgStyle {
+    height: 225px;
+    weight: 125px;
+}
+
+img {
+    @include imgStyle;
+}
+
+@mixin labelStyle {
+    background-color: $label-color;
+    color: $text-color
+}
+
+label {
+    @include labelStyle;
+}
+
+input {
+    @include labelStle;
+}
+
+@mixin borderStyle($width:4px, $borderColor:rgb(252, 130, 150)) {
+    border:$width solid $borderColor
+}
+
+h3{
+    @include borderStyle($width:30px);
+}
+
+@mixin tableStyle {
+    background-color: bisque;
+    color:rgb(89, 255, 0);
+}
+
+table {
+    @include tableStyle()
+}
+
